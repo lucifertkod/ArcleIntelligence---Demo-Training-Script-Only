@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Arcle Intelligence</string>
+    <string name="accessibility_service_description">Arcle Intelligence uses accessibility to extract web content for Deep Research, automate device controls, and read screen content for real-time data queries.</string>
+</resources>
