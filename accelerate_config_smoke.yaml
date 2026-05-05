@@ -1,0 +1,18 @@
+# Smoke test config — 1× H100
+# Used with: accelerate launch --config_file accelerate_config_smoke.yaml --num_processes 1 train.py
+# `deepspeed_config_file` is RELATIVE to the cwd, so always launch with
+# `cd <project_dir> && accelerate launch ...`. This makes the file
+# portable across RunPod (/workspace/arcle), Lightning AI Studios
+# (/teamspace/studios/this_studio/arcle), or any local clone.
+compute_environment: LOCAL_MACHINE
+debug: false
+distributed_type: DEEPSPEED
+deepspeed_config:
+  deepspeed_config_file: ds_config_smoke.json
+  zero3_init_flag: false
+machine_rank: 0
+main_training_function: main
+num_machines: 1
+num_processes: 1
+use_cpu: false
+same_network: true
